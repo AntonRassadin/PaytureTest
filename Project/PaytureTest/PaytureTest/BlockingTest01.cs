@@ -11,11 +11,11 @@ namespace PaytureTest
     public class PaytureApiTest
     {
         private const string URL = "https://sandbox3.payture.com/api/Block";
+
         [DataTestMethod]
         [DataRow(1050, "Merchant", 5218851946955484, 12, 21, "Ivan Ivanov", 123, true)]
         [DataRow(1755, "Merchant", 3300000000000001, 12, 22, "Ivan Ivanov", 521, false)]
         [DataRow(2184, "Merchant", 5218851946955484, 12, 21, "Ivan Ivanov", 123, true)]
-
         public void BlockTest(int amount, string key, long PAN, int eMonth, int eYear, string cardHolder, int secureCode, bool successStatus)
         {
             HttpClient client = new HttpClient();
