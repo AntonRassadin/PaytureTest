@@ -7,33 +7,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PaytureTest
 {
-    /*
-    [TestClass]
-    public class TetsInTest
-    {
-        private const string URL = "https://sandbox3.payture.com/api/Block";
-        [DataTestMethod]
-        [DataRow(1755, "Merchant", 5218851946955484, 12, 21, "Ivan Ivanov", 123)]
-        public void Test(int amount, string key, long PAN, int eMonth, int eYear, string cardHolder, int secureCode)
-        {
-            string orderId = Guid.NewGuid().ToString("N");
-            Console.WriteLine(orderId);
-            var builder = new UriBuilder(URL);
-            builder.Port = -1;
-            var query = HttpUtility.ParseQueryString(builder.Query);
-            query["Key"] = key;
-            query["OrderId"] = orderId;
-            query["Amount"] = amount.ToString();
-            string payInfo = $"PAN={PAN}; EMonth={eMonth}; EYear={eYear}; CardHolder={cardHolder}; " +
-                $"SecureCode={secureCode}; OrderId = {orderId}; Amount = {amount};";
-            query["PayInfo"] = payInfo;
-            builder.Query = query.ToString();
-            string url = builder.ToString();
-                        
-            Console.WriteLine(url);
-        }
-    }
-    */
     [TestClass]
     public class PaytureApiTest
     {
